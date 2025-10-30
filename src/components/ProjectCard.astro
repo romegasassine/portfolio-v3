@@ -1,7 +1,7 @@
 ---
 const { project } = Astro.props;
 ---
-<article class="rounded-2xl border p-5 shadow-sm bg-white">
+<article class="rounded-2xl border p-5 bg-black/80 backdrop-blur-sm shadow-sm transition-transform transform hover:-translate-y-1 hover:shadow-lg">
   <h3 class="text-lg font-semibold tracking-tight">
     <a href={project.url} rel="noopener noreferrer">{project.title}</a>
   </h3>
