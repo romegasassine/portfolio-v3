@@ -1,0 +1,24 @@
+---
+const { title = 'Rachid Sassine — Portfolio', description = 'Software Developer Portfolio' } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body class="min-h-screen bg-black text-white antialiased font-sans">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 px-3 py-1 border rounded-lg bg-white shadow">Skip to content</a>
+    <header class="w-full sticky top-0 z-10 bg-black backdrop-blur border-b">
+      <slot name="header" />
+    </header>
+    <main id="main" class="mx-auto max-w-3xl px-4 py-10">
+      <slot />
+    </main>
+    <footer class="mx-auto max-w-3xl px-4 py-12 text-sm text-white">
+      <slot name="footer" />
+    </footer>
+  </body>
+</html>

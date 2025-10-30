@@ -1,0 +1,21 @@
+---
+const { title, subtitle, imgSrc = '/images/profilepic.jpg', imgAlt = 'Portrait' } = Astro.props;
+---
+<div class="flex flex-col sm:flex-row sm:items-center gap-6 mb-8">
+  <img
+      src={imgSrc}
+      alt={imgAlt}
+      width="240"
+      height="240"
+      class="mx-auto h-60 w-60 rounded-full border-4 border-zinc-300 shadow-md"
+      loading="eager"
+      decoding="async"
+      />
+      <div class="space-y-2">
+        {title && <h1 class="text-3xl font-semibold tracking-tight">{title}</h1>}
+        {subtitle && <p class="text-white-600">{subtitle}</p>}
+        <div class="flex gap-3">
+          <slot name="actions" />
+        </div>
+      </div>
+</div>

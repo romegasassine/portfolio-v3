@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<Base title="Not Found — Rachid Sassine" description="Page not found">
+  <Header slot="header" />
+  <section class="prose prose-zinc max-w-none">
+    <h1>Page not found</h1>
+    <p>The page you’re looking for does not exist.</p>
+    <p><a href="/">Go back home</a></p>
+  </section>
+  <Footer slot="footer" />
+</Base>

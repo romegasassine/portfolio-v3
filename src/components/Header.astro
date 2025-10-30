@@ -1,0 +1,20 @@
+---
+const currentPath = Astro.url.pathname;
+const link = (href: string) => {
+  const active = currentPath === href;
+  return `px-2 py-1 rounded-full border transition ${
+  active
+    ? 'border-white text-white font-semibold'
+    : 'border-transparent text-zinc-200 hover:border-white hover:text-white'
+}`;
+}
+---
+<div class="mx-auto max-w-3xl px-4 py-3 flex items-center justify-between">
+  <a href="/" class="text-base font-semibold tracking-tight">Rachid Sassine</a>
+  <nav class="flex items-center gap-1 text-sm">
+    <a href="/" class={link('/')}>Home</a>
+    <a href="/projects" class={link('/projects')}>Projects</a>
+    <a href="/contact" class={link('/contact')}>Contact</a>
+    <a href="/documents/Rachid Raphael Sassine Resume.pdf" class="px-2 py-1 rounded-lg border hover:shadow">Resume</a>
+  </nav>
+</div>

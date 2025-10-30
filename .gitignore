@@ -1,0 +1,44 @@
+# build outputs
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# environment and config
+.env
+.env.local
+.vercel/
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+
+# lock and cache
+package-lock.json
+npm-debug.log*
+.pnpm-store/
+.cache/
+# build outputs
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# environment and config
+.env
+.env.local
+.vercel/
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+
+

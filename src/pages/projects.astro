@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import projects from "../content/projects.json";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+<Base title="Projects — Rachid Sassine" description="Selected work">
+  <Header slot="header" />
+  <section class="grid gap-6 sm:grid-cols-2">
+    {projects.map((p) => <ProjectCard project={p} />)}
+  </section>
+  <Footer slot="footer" />
+</Base>
