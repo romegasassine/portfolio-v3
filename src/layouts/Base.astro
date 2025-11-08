@@ -8,16 +8,19 @@ const { title = 'Rachid Sassine — Portfolio', description = 'Software Develope
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body class="min-h-screen bg-black text-white antialiased font-sans">
-    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 px-3 py-1 border rounded-lg bg-white shadow">Skip to content</a>
-    <header class="w-full sticky top-0 z-10 bg-black backdrop-blur border-b">
+  <body class="min-h-screen bg-brand-midnight text-brand-linen antialiased font-sans">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 px-3 py-1 border border-brand-rose rounded-lg bg-brand-linen text-brand-midnight shadow">Skip to content</a>
+    <header class="w-full sticky top-0 z-10 bg-brand-midnight/95 backdrop-blur border-b border-brand-dusk/60 shadow-sm shadow-brand-midnight/60">
       <slot name="header" />
     </header>
     <main id="main" class="mx-auto max-w-3xl px-4 py-10">
       <slot />
     </main>
-    <footer class="mx-auto max-w-3xl px-4 py-12 text-sm text-white">
+    <footer class="mx-auto max-w-3xl px-4 py-12 text-sm text-brand-linen/80">
       <slot name="footer" />
     </footer>
   </body>

@@ -2,19 +2,21 @@
 const currentPath = Astro.url.pathname;
 const link = (href: string) => {
   const active = currentPath === href;
-  return `px-2 py-1 rounded-full border transition ${
+  return `px-3 py-1 rounded-full border transition ${
   active
-    ? 'border-white text-white font-semibold'
-    : 'border-transparent text-zinc-200 hover:border-white hover:text-white'
+    ? 'border-brand-rose bg-brand-dusk text-brand-linen font-semibold shadow-sm shadow-brand-midnight/40'
+    : 'border-transparent text-brand-linen/80 hover:text-brand-linen hover:border-brand-rose/60'
 }`;
 }
 ---
-<div class="mx-auto max-w-3xl px-4 py-3 flex items-center justify-between">
-  <a href="/" class="text-base font-semibold tracking-tight">Rachid Sassine</a>
+<div class="mx-auto max-w-3xl px-4 py-3 flex items-center justify-between text-brand-linen">
+  <a href="/" class="text-base font-semibold tracking-tight text-brand-linen">Rachid Sassine</a>
   <nav class="flex items-center gap-1 text-sm">
     <a href="/" class={link('/')}>Home</a>
     <a href="/projects" class={link('/projects')}>Projects</a>
     <a href="/contact" class={link('/contact')}>Contact</a>
-    <a href="/documents/Rachid Raphael Sassine Resume.pdf" class="px-2 py-1 rounded-lg border hover:shadow">Resume</a>
+    <a href="/documents/Rachid Raphael Sassine Resume.pdf" class="px-3 py-1 rounded-full border border-brand-rose/70 bg-brand-rose text-brand-midnight font-semibold shadow-sm shadow-brand-midnight/40 hover:bg-brand-linen transition">
+      Resume
+    </a>
   </nav>
 </div>

@@ -1,9 +1,5 @@
-Hi There!
+Thank you for visiting my portfolio!
+I am always passionate about opportunities to research and build new concepts.
 
-Currently, Software Developer @ HCLTech
-
-Passionate about opportunities to research and build new concepts.
-
-Aside from building projects,
-my hobbies include anything sports-related (Go Knicks!), chess, and trying new foods.
+A little about me : I love anything sports-related (Go Knicks!), chess, and trying new foods.
 

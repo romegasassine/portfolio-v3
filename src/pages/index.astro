@@ -2,25 +2,23 @@
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Home from "../content/home.md";
 import projects from "../content/projects.json";
 import ProjectCard from "../components/ProjectCard.astro";
 import Hero from "../components/Hero.astro";
 import Button from "../components/Button.astro";
+import WelcomeNotification from "../components/WelcomeNotification.astro";
 ---
 <Base title="Rachid Sassine — Portfolio" description="Software Developer Portfolio">
   <Header slot="header" />
 
-  <Hero title="Rachid Sassine" subtitle="Software Developer — Portfolio">
+  <Hero title="Rachid Sassine" subtitle="Software Developer @ HCLTech">
     <Button slot="actions" href="/documents/Rachid Raphael Sassine Resume.pdf">Resume</Button>
-    <Button slot="actions" href="https://github.com/RachidSassine">GitHub</Button>
+    <Button slot="actions" href="https://github.com/romegasassine">GitHub</Button>
   </Hero>
 
-  <section class="pt-10 prose prose-zinc text-white max-w-none text-left">
-    <Home />
-  </section>
+  <WelcomeNotification />
 
-  <h3 class="pt-4 text-center font-bold">My Projects </h3>
+  <h3 class="pt-4 text-center font-bold text-brand-rose tracking-tight">My Projects </h3>
   {projects.length > 0 && (
     <section class="mt-10 grid gap-6 sm:grid-cols-2">
       {projects.map((p) => <ProjectCard project={p} />)}
